@@ -1,0 +1,15 @@
+{
+  "generated_at_utc": "2026-05-14T00:00:00+00:00",
+  "all": {
+    "n": 3208,
+    "wins": 1232,
+    "losses": 1976,
+    "win_rate": 0.38403990024937656,
+    "avg_net": -3.53210723192,
+    "total_net": -11331.0
+  },
+  "notes": [
+    "Sample data. Replace this file with a real XenSignal export.",
+    "Dashboard expects this file at /reports/latest-shadow-summary.json."
+  ]
+}
