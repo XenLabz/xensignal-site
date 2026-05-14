@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-05-14T00:44:36.703751+00:00",
+  "profile": "STRICT_DEFENSIVE_FILTER",
+  "deployment_mode": "paper_watch_only",
+  "engine_may_consume": false,
+  "shadow_only": true,
+  "recommended_params": {
+    "min_net_edge_percent": 4.0,
+    "max_spread_percent": 1.5,
+    "allowed_minutes_of_window": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "require_depth": true,
+    "notes": "Sample optimizer state. Replace with Production/state/xensignal_profit_optimizer.json-derived export."
+  }
+}

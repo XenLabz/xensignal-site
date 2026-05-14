@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XenSignal by XenLabz | Shadow-Mode Market Intelligence</title>
+  <meta name="description" content="XenSignal is a shadow-mode market intelligence and decision-support system from XenLabz. Built for disciplined signal review, optimizer testing, and evidence-first trading research.">
+  <meta property="og:title" content="XenSignal by XenLabz">
+  <meta property="og:description" content="Shadow-mode market intelligence, optimizer review, and evidence-first trading research.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-mark">XS</div>
+      <div>
+        <div class="eyebrow">XenLabz presents</div>
+        <h1>XenSignal</h1>
+      </div>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#shadow">Shadow Mode</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="button ghost" href="#early-access">Early Access</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="badge">Shadow-only research build</div>
+        <h2>Market signal intelligence without pretending the machine is magic.</h2>
+        <p>
+          XenSignal is a decision-support and optimizer research platform for tracking market signals,
+          shadow performance, trade-quality filters, and deployment readiness before live execution ever gets a vote.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="dashboard.html">View Shadow Dashboard</a>
+          <a class="button secondary" href="#architecture">See Architecture</a>
+        </div>
+        <p class="microcopy">
+          Built for review, calibration, and evidence gathering. Not financial advice. Not live execution. Not a crystal ball wearing a hoodie.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="terminal">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>{
+  "system": "XenSignal",
+  "mode": "shadow_only",
+  "optimizer": "paper_watch_only",
+  "engine_may_consume": false,
+  "goal": "evidence_before_execution"
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="grid two">
+      <div class="panel">
+        <h3>What XenSignal does</h3>
+        <p>
+          XenSignal evaluates candidate entries using model fair value, market pricing, spread,
+          timing, position state, and optimizer guidance. The current public-facing build is designed
+          to present evidence, not execute trades.
+        </p>
+      </div>
+      <div class="panel">
+        <h3>Why shadow mode matters</h3>
+        <p>
+          Shadow mode lets the system observe, score, and log candidate trades without blocking or placing
+          real orders. In other words, the system gets to prove itself before touching money like a civilized creature.
+        </p>
+      </div>
+    </section>
+
+    <section id="shadow" class="feature-band">
+      <div>
+        <div class="eyebrow">Current operating posture</div>
+        <h3>Paper-watch only. Engine consumption disabled.</h3>
+        <p>
+          The optimizer can recommend profiles and filters, but live execution blocking is intentionally not enabled.
+          Candidate decisions can be evaluated and logged while keeping the deployment safely observational.
+        </p>
+      </div>
+      <div class="status-stack">
+        <div class="status-row"><span>Deployment mode</span><strong>paper_watch_only</strong></div>
+        <div class="status-row"><span>Engine may consume</span><strong>false</strong></div>
+        <div class="status-row"><span>Live execution</span><strong>disabled</strong></div>
+      </div>
+    </section>
+
+    <section id="architecture" class="grid three">
+      <div class="panel">
+        <h3>1. Local engine</h3>
+        <p>XenSignal runs locally or in a controlled compute environment where the model, logs, and market data pipeline live.</p>
+      </div>
+      <div class="panel">
+        <h3>2. Static exports</h3>
+        <p>The engine exports JSON summaries and report files. cPanel hosts those files like a useful filing cabinet, not a pretend GPU cluster.</p>
+      </div>
+      <div class="panel">
+        <h3>3. Hosted viewer</h3>
+        <p>The XenLabz site displays dashboards, status, and reports from static files using HTML, CSS, and JavaScript.</p>
+      </div>
+    </section>
+
+    <section class="split">
+      <div>
+        <h3>Built for disciplined iteration</h3>
+        <ul class="checklist">
+          <li>Shadow gate evaluation</li>
+          <li>Optimizer profile display</li>
+          <li>Candidate pass/block reason review</li>
+          <li>Historical report publishing</li>
+          <li>Clear separation between evidence and execution</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <h3>Next milestone</h3>
+        <p>
+          Publish fresh shadow summaries from the local engine to this site, then watch the dashboard grow from real exported logs.
+        </p>
+        <a class="button primary" href="dashboard.html">Open Dashboard</a>
+      </div>
+    </section>
+
+    <section id="early-access" class="early-access">
+      <h3>Early access</h3>
+      <p>
+        XenSignal is currently in private research and shadow-testing. Use this section later for a Formspree,
+        Mailchimp, or custom PHP signup form.
+      </p>
+      <form class="signup" action="#" method="post">
+        <input type="email" placeholder="email@example.com" aria-label="Email address" disabled>
+        <button type="button" disabled>Coming Soon</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> XenLabz, LLC</span>
+    <span>Research system only. Not financial advice.</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

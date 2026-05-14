@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XenSignal Shadow Dashboard</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-mark">XS</div>
+      <div>
+        <div class="eyebrow">XenSignal</div>
+        <h1>Shadow Dashboard</h1>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#reports">Reports</a>
+      <a class="button ghost" href="reports/latest-shadow-summary.json">Raw JSON</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard-hero">
+      <div>
+        <div class="badge">Static cPanel dashboard</div>
+        <h2>Shadow performance viewer</h2>
+        <p>
+          This page reads exported JSON from <code>/reports</code>. The engine does not run here,
+          which is exactly how shared hosting avoids becoming a smoking crater.
+        </p>
+      </div>
+      <div class="refresh-card">
+        <span>Last loaded</span>
+        <strong id="loadedAt">Loading...</strong>
+      </div>
+    </section>
+
+    <section class="metrics" id="metrics">
+      <div class="metric-card">
+        <span>Windows / Candidates</span>
+        <strong id="metricN">-</strong>
+      </div>
+      <div class="metric-card">
+        <span>Wins</span>
+        <strong id="metricWins">-</strong>
+      </div>
+      <div class="metric-card">
+        <span>Losses</span>
+        <strong id="metricLosses">-</strong>
+      </div>
+      <div class="metric-card">
+        <span>Win Rate</span>
+        <strong id="metricWinRate">-</strong>
+      </div>
+      <div class="metric-card">
+        <span>Avg Net</span>
+        <strong id="metricAvgNet">-</strong>
+      </div>
+      <div class="metric-card">
+        <span>Total Net</span>
+        <strong id="metricTotalNet">-</strong>
+      </div>
+    </section>
+
+    <section class="grid two">
+      <div class="panel">
+        <h3>Optimizer posture</h3>
+        <div class="status-stack">
+          <div class="status-row"><span>Profile</span><strong id="profile">-</strong></div>
+          <div class="status-row"><span>Deployment mode</span><strong id="deploymentMode">-</strong></div>
+          <div class="status-row"><span>Engine may consume</span><strong id="engineMayConsume">-</strong></div>
+          <div class="status-row"><span>Shadow only</span><strong id="shadowOnly">-</strong></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Recommended parameters</h3>
+        <pre class="json-box" id="recommendedParams">Loading...</pre>
+      </div>
+    </section>
+
+    <section id="reports" class="panel">
+      <h3>Report files</h3>
+      <p>Drop fresh exports into the <code>/reports</code> folder and this page will update on reload.</p>
+      <div class="report-links">
+        <a class="button secondary" href="reports/latest-shadow-summary.json">latest-shadow-summary.json</a>
+        <a class="button secondary" href="reports/latest-optimizer-state.json">latest-optimizer-state.json</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>Recent notes</h3>
+      <ul id="notes" class="checklist"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> XenLabz, LLC</span>
+    <span>Dashboard reads static JSON exports only.</span>
+  </footer>
+
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>
