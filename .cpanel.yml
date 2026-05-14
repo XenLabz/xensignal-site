@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/stopazi/public_html/xensignal/
-    - /bin/mkdir -p $DEPLOYPATH
-    - if [ -x /usr/bin/rsync ]; then /usr/bin/rsync -av --delete public/ $DEPLOYPATH; else /bin/cp -R public/. $DEPLOYPATH; fi
+    - export DEPLOYPATH=$HOME/public_html/xensignal/
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - if [ -x /usr/bin/rsync ]; then /usr/bin/rsync -av --delete public/ "$DEPLOYPATH"; else /bin/cp -R public/. "$DEPLOYPATH"; fi
