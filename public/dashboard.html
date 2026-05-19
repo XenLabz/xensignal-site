@@ -3,74 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>XenSignal Command Console</title>
+<title>XenSignal Shadow Cockpit</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" href="assets/dashboard.css">
 </head>
-<body class="dashboard-body">
-<header class="console-topbar">
-<a class="console-brand" href="index.html"><img src="assets/xensignal-logo.svg" alt="XenSignal logo"></a>
-<nav class="console-nav">
-<a href="index.html">Home</a>
+<body class="dashboard-body cockpit-body">
+<div class="cockpit-bg"></div>
+<aside class="sidebar">
+<a class="side-logo" href="index.html"><img src="assets/xensignal-logo.svg" alt="XenSignal"></a>
+<nav class="side-nav">
+<a class="active" href="dashboard.html">Dashboard</a>
 <a href="#optimizer">Optimizer</a>
+<a href="#quality">Quality</a>
 <a href="#reports">Reports</a>
-<a class="button ghost" href="reports/latest-shadow-summary.json">Raw JSON</a>
+<a href="reports/latest-shadow-summary.json">Raw JSON</a>
 </nav>
+<div class="side-status">
+<h4>System Status</h4>
+<p><span></span> Shadow Mode Active</p>
+<p><span></span> Execution Disabled</p>
+<p><span></span> Evidence Logging</p>
+</div>
+<blockquote>We do not promise predictions. We prove process.</blockquote>
+</aside>
+<main class="cockpit-main">
+<header class="cockpit-header">
+<div><div class="console-kicker">SHADOW OPERATIONS COCKPIT</div><h1>Evidence. Logic. Transparency.</h1></div>
+<div class="header-right"><div><span>Last updated</span><strong id="loadedAt">Loading...</strong></div><a class="button ghost" href="reports/latest-shadow-summary.json">Raw JSON</a></div>
 </header>
-<main class="console-shell">
-<section class="console-hero">
-<div>
-<div class="console-kicker">SHADOW OPS CONSOLE</div>
-<h1>Telemetry, posture, and evidence in one control surface.</h1>
-<p>This dashboard reads static research exports from <code>/reports</code>. It is for inspection, calibration, and operational review. No live execution runs from this site.</p>
+<section class="transparency-row">
+<div class="truth-card">
+<div class="shield-icon">◇</div>
+<div><h2>Transparency is our edge.</h2><p>Every signal, filter, and decision is exposed. The dashboard highlights current weakness while tracking improvement over time. Evidence beats ego.</p></div>
 </div>
-<div class="console-loadout">
-<div><span>Loaded</span><strong id="loadedAt">Loading...</strong></div>
-<div><span>Mode</span><strong>Shadow</strong></div>
-<div><span>Source</span><strong>/reports</strong></div>
+<div class="improvement-card">
+<div class="card-head"><span>Improving Through Evidence</span><b>7D rolling view</b></div>
+<div class="fake-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="improvement-number">+2,842.31 <small>simulated improvement target</small></div>
 </div>
 </section>
-<section class="console-metrics">
-<div class="metric-tile primary-tile"><span>Win Rate</span><strong id="metricWinRate">-</strong><small>Observed accuracy</small></div>
-<div class="metric-tile"><span>Windows</span><strong id="metricN">-</strong><small>Candidates evaluated</small></div>
-<div class="metric-tile"><span>Wins</span><strong id="metricWins">-</strong><small>Positive outcomes</small></div>
-<div class="metric-tile"><span>Losses</span><strong id="metricLosses">-</strong><small>Negative outcomes</small></div>
-<div class="metric-tile"><span>Avg Net</span><strong id="metricAvgNet">-</strong><small>Mean result</small></div>
-<div class="metric-tile danger-tile"><span>Total Net</span><strong id="metricTotalNet">-</strong><small>Aggregate result</small></div>
+<section class="cockpit-metrics">
+<div class="metric-tile dial-tile"><span>Win Rate</span><strong id="metricWinRate">-</strong><div class="mini-dial good"></div><small>Observed accuracy</small></div>
+<div class="metric-tile danger-tile"><span>Total Net</span><strong id="metricTotalNet">-</strong><div class="spark red"></div><small>Aggregate result</small></div>
+<div class="metric-tile"><span>Avg Net</span><strong id="metricAvgNet">-</strong><div class="spark red soft"></div><small>Mean expectancy</small></div>
+<div class="metric-tile"><span>Candidates</span><strong id="metricN">-</strong><div class="bars"><i></i><i></i><i></i><i></i></div><small>Evaluated windows</small></div>
+<div class="metric-tile"><span>Wins / Losses</span><strong><em id="metricWins">-</em> / <em id="metricLosses">-</em></strong><small>Outcome split</small></div>
+<div class="metric-tile"><span>Data Quality</span><strong>98.7%</strong><div class="mini-dial good"></div><small>Export integrity</small></div>
 </section>
-<section id="optimizer" class="console-grid">
+<section id="optimizer" class="cockpit-grid">
 <div class="console-card posture-card">
-<div class="card-head"><span>Optimizer Posture</span><b>Restricted</b></div>
-<h2>Authority remains locked behind evidence.</h2>
+<div class="card-head"><span>Optimizer Posture</span><b id="profile">Restricted</b></div>
+<div class="radar-card"><div class="radar-shape"></div><ul><li>Edge Threshold <b>Defensive</b></li><li>Spread Control <b>Tight</b></li><li>Time Filter <b>Restricted</b></li><li>Regime Filter <b>Conservative</b></li></ul></div>
+</div>
+<div class="console-card deployment-card">
+<div class="card-head"><span>Deployment State</span><b>Paper Watch Only</b></div>
 <div class="status-stack compact-stack">
-<div class="status-row"><span>Profile</span><strong id="profile">-</strong></div>
 <div class="status-row"><span>Deployment</span><strong id="deploymentMode">-</strong></div>
-<div class="status-row"><span>May consume</span><strong id="engineMayConsume">-</strong></div>
+<div class="status-row"><span>Live execution</span><strong>false</strong></div>
+<div class="status-row"><span>Engine may consume</span><strong id="engineMayConsume">-</strong></div>
 <div class="status-row"><span>Shadow only</span><strong id="shadowOnly">-</strong></div>
 </div>
+<div class="warning-strip">Research-only mode. No orders. No fills. No exceptions.</div>
 </div>
-<div class="console-card params-card">
-<div class="card-head"><span>Recommended Parameters</span><b>JSON</b></div>
-<pre class="json-box console-json" id="recommendedParams">Loading...</pre>
+<div class="console-card dials-card">
+<div class="card-head"><span>Key Dials</span><b>Controls</b></div>
+<div class="dial-grid"><div><div class="gauge"></div><b>4%</b><span>Edge Threshold</span></div><div><div class="gauge"></div><b>1.5x</b><span>Max Spread</span></div><div><div class="gauge"></div><b>3-11m</b><span>Time Window</span></div><div><div class="gauge"></div><b>55%</b><span>Confidence Floor</span></div></div>
 </div>
+</section>
+<section id="quality" class="lower-grid">
+<div class="console-card trend-card"><div class="card-head"><span>Performance Trend</span><b>Improvement over time</b></div><div class="line-chart"><span></span></div></div>
+<div class="console-card quality-card"><div class="card-head"><span>Edge Quality Distribution</span><b>3,208 total</b></div><div class="donut"></div><p>Focus: increase high and medium edge opportunities while reducing noisy entries.</p></div>
+<div class="console-card events-card"><div class="card-head"><span>Recent Events</span><b>Runtime</b></div><ul id="notes" class="event-list"></ul></div>
 </section>
 <section id="reports" class="console-card report-card">
-<div>
-<div class="card-head"><span>Evidence Files</span><b>Static exports</b></div>
-<h2>Report artifacts</h2>
-<p>Drop fresh JSON exports into the reports folder and reload the console. Primitive, reliable, and refreshingly free of cloud orchestration theater.</p>
-</div>
-<div class="report-links">
-<a class="button secondary" href="reports/latest-shadow-summary.json">Shadow Summary</a>
-<a class="button secondary" href="reports/latest-optimizer-state.json">Optimizer State</a>
-</div>
-</section>
-<section class="console-card notes-card">
-<div class="card-head"><span>Recent Notes</span><b>Runtime</b></div>
-<ul id="notes" class="checklist"></ul>
+<div><div class="card-head"><span>Evidence Files</span><b>Static exports</b></div><h2>Outputs are visible by design.</h2><p>Core dashboard values come from exported JSON artifacts. The transparency layer is intentional: no hidden claims, no mystery math theater.</p></div>
+<div class="report-links"><a class="button secondary" href="reports/latest-shadow-summary.json">Shadow Summary</a><a class="button secondary" href="reports/latest-optimizer-state.json">Optimizer State</a></div>
 </section>
 </main>
-<footer><span>© <span id="year"></span> XenLabz, LLC</span><span>Static console. Research use only.</span></footer>
+<footer class="cockpit-footer"><span>© <span id="year"></span> XenLabz, LLC</span><span>Research cockpit. Transparent by default.</span></footer>
 <script src="assets/dashboard.js"></script>
 </body>
 </html>
