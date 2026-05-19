@@ -10,7 +10,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="XenSignal home">
-      <div class="logo-mark" aria-hidden="true">
+      <div class="logo-mark logo-small" aria-hidden="true">
         <span class="mark-ring"></span>
         <span class="mark-x">X</span>
         <span class="mark-pulse"></span>
@@ -21,91 +21,83 @@
       </div>
     </a>
     <nav>
-      <a href="#overview">Overview</a>
-      <a href="#signal-stack">Signal Stack</a>
+      <a href="#platform">Platform</a>
       <a href="#shadow">Shadow Mode</a>
+      <a href="#research">Research</a>
       <a href="dashboard.html">Dashboard</a>
       <a href="#early-access" class="button ghost">Early Access</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div>
+    <section class="hero hero-logo-first">
+      <div class="hero-copy">
         <div class="badge">Private shadow research build</div>
-        <h2>Signal intelligence for markets that refuse to behave.</h2>
+        <h2>Find the signal before the market noise eats the evidence.</h2>
         <p>
-          XenSignal is a market signal research platform from XenLabz. It studies price movement,
-          candidate entries, optimizer behavior, and deployment readiness in shadow mode before any
-          strategy is trusted with real execution.
+          XenSignal is a market signal intelligence system from XenLabz. It evaluates candidate entries,
+          optimizer behavior, market context, and deployment readiness in shadow mode before any strategy
+          earns the right to touch live execution.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="dashboard.html">View Shadow Dashboard</a>
-          <a class="button secondary" href="#signal-stack">Explore Signal Stack</a>
+          <a class="button primary" href="dashboard.html">Open Shadow Dashboard</a>
+          <a class="button secondary" href="#platform">See the Platform</a>
         </div>
-        <p class="microcopy">
-          Research and decision support only. No live execution. No financial advice. Evidence first.
-        </p>
+        <p class="microcopy">Decision support only. No live execution. No financial advice. Evidence first, hype never.</p>
       </div>
 
-      <div class="hero-card signal-card" aria-label="XenSignal system status preview">
-        <div class="radar-visual" aria-hidden="true">
-          <span class="radar-ring one"></span>
-          <span class="radar-ring two"></span>
-          <span class="radar-sweep"></span>
-          <span class="radar-axis horizontal"></span>
-          <span class="radar-axis vertical"></span>
-          <span class="radar-pulse"></span>
+      <div class="hero-logo-stage" aria-label="XenSignal logo concept">
+        <div class="signal-orbit"></div>
+        <div class="signal-orbit orbit-two"></div>
+        <div class="signal-orbit orbit-three"></div>
+        <div class="logo-mark logo-hero" aria-hidden="true">
+          <span class="mark-ring"></span>
+          <span class="mark-x">X</span>
+          <span class="mark-pulse"></span>
         </div>
-        <div class="terminal">
-          <div class="terminal-top"><span></span><span></span><span></span></div>
-          <pre><code>{
-  "system": "XenSignal",
-  "builder": "XenLabz, LLC",
-  "mode": "shadow_only",
-  "execution": "disabled",
-  "principle": "evidence_before_execution"
-}</code></pre>
+        <div class="wordmark">
+          <span>Xen</span><strong>Signal</strong>
         </div>
+        <div class="tagline">radar-grade market research</div>
       </div>
     </section>
 
-    <section id="overview" class="intro-panel">
+    <section id="platform" class="intro-panel logo-panel">
       <div>
-        <div class="eyebrow">Product thesis</div>
-        <h3>XenSignal treats prediction as an engineering problem, not a magic trick.</h3>
+        <div class="eyebrow">Brand logic</div>
+        <h3>The mark is an X, a pulse, and a radar trace in one system.</h3>
       </div>
       <p>
-        The platform is built around controlled observation: generate signals, score them, compare them against market behavior,
-        and preserve the evidence trail. If a model cannot survive shadow testing, it does not deserve production authority.
+        The visual identity now matches the product thesis: XenSignal is not a casino-flavored prediction toy.
+        It is a controlled signal lab: observe, score, calibrate, and only then consider execution.
       </p>
     </section>
 
-    <section id="signal-stack" class="grid three">
+    <section class="grid three">
       <div class="panel">
         <span class="panel-number">01</span>
-        <h3>Market context</h3>
-        <p>Track target, timing, spread, book behavior, and movement inside short decision windows.</p>
+        <h3>Signal detection</h3>
+        <p>Track target, timing, spread, orderbook behavior, and price movement inside short decision windows.</p>
       </div>
       <div class="panel">
         <span class="panel-number">02</span>
-        <h3>Model fair value</h3>
-        <p>Compare model-derived fair value against available prices to identify possible edge.</p>
+        <h3>Fair-value scoring</h3>
+        <p>Compare model-derived fair value against available market pricing to identify possible edge.</p>
       </div>
       <div class="panel">
         <span class="panel-number">03</span>
-        <h3>Optimizer guidance</h3>
-        <p>Review profile recommendations, filters, and block reasons before any execution logic can consume them.</p>
+        <h3>Optimizer discipline</h3>
+        <p>Review recommended filters, pass reasons, and block reasons before the engine is allowed to consume anything.</p>
       </div>
     </section>
 
     <section id="shadow" class="feature-band">
       <div>
-        <div class="eyebrow">Current operating posture</div>
-        <h3>Shadow first. Production later.</h3>
+        <div class="eyebrow">Operating posture</div>
+        <h3>Shadow mode is the gatekeeper.</h3>
         <p>
-          XenSignal is currently configured for paper-watch research. The engine can observe and score candidate decisions,
-          but live execution remains disabled until the evidence supports a controlled release path.
+          XenSignal currently operates as a paper-watch research system. The engine can observe and score candidate decisions,
+          but live execution remains disabled until performance evidence supports a controlled release path.
         </p>
       </div>
       <div class="status-stack">
@@ -116,7 +108,7 @@
       </div>
     </section>
 
-    <section id="architecture" class="grid three">
+    <section id="research" class="grid three">
       <div class="panel compact">
         <h3>Controlled engine</h3>
         <p>Research logic, market data handling, logs, and strategy evaluation stay separate from the public site.</p>
@@ -134,7 +126,7 @@
     <section id="early-access" class="early-access">
       <div class="eyebrow">Access</div>
       <h3>Private research build</h3>
-      <p>XenSignal is being developed and calibrated by XenLabz, LLC. Public access will open only after the shadow data earns it.</p>
+      <p>XenSignal is being developed and calibrated by XenLabz, LLC. Public access opens only after the shadow data earns it.</p>
       <form class="signup" action="#" method="post">
         <input type="email" placeholder="early-access@example.com" disabled aria-label="Early access email placeholder">
         <button type="button" disabled>Coming Soon</button>
@@ -147,8 +139,6 @@
     <span>XenSignal is a research and decision-support system. Not financial advice.</span>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
