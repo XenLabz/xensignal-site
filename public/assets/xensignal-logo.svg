@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 280" role="img" aria-labelledby="title desc">
+  <title id="title">XenSignal logo</title>
+  <desc id="desc">A glowing XenSignal wordmark with an angular X, radar ring, and signal waveform.</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="65%">
+      <stop offset="0" stop-color="#5cf6ff" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#008dff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyan" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#72ffff"/>
+      <stop offset="0.45" stop-color="#00c8ff"/>
+      <stop offset="1" stop-color="#0978ff"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#b8d8ef"/>
+      <stop offset="1" stop-color="#53b8ff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="hardShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00111e" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00d9ff" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <rect width="980" height="280" fill="transparent"/>
+  <ellipse cx="500" cy="150" rx="430" ry="110" fill="url(#glow)"/>
+
+  <g transform="translate(76 28)" filter="url(#hardShadow)">
+    <circle cx="112" cy="112" r="96" fill="rgba(0,20,40,0.35)" stroke="#0aa9ff" stroke-width="2" opacity="0.75"/>
+    <circle cx="112" cy="112" r="76" fill="none" stroke="#58f3ff" stroke-width="3" stroke-dasharray="72 20 34 18" opacity="0.78"/>
+    <circle cx="112" cy="112" r="54" fill="none" stroke="#0b79d0" stroke-width="2" stroke-dasharray="9 12" opacity="0.7"/>
+    <line x1="18" y1="112" x2="206" y2="112" stroke="#4befff" stroke-width="1" opacity="0.35"/>
+    <line x1="112" y1="18" x2="112" y2="206" stroke="#4befff" stroke-width="1" opacity="0.22"/>
+    <polyline points="20,150 50,145 70,162 95,102 116,128 145,78 170,112 202,50" fill="none" stroke="#6fffff" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+    <polygon points="28,202 98,112 34,60 82,60 118,90 202,18 142,124 196,184 150,184 116,148" fill="url(#cyan)" stroke="#96ffff" stroke-width="2"/>
+    <polygon points="96,112 116,90 202,18 142,124" fill="#ffffff" opacity="0.2"/>
+  </g>
+
+  <g transform="translate(285 74)" filter="url(#softGlow)">
+    <text x="0" y="108" font-family="Orbitron, Eurostile, Rajdhani, Arial Black, sans-serif" font-size="92" font-weight="900" letter-spacing="-6" fill="url(#silver)">Xen</text>
+    <text x="190" y="108" font-family="Orbitron, Eurostile, Rajdhani, Arial Black, sans-serif" font-size="92" font-weight="900" letter-spacing="-5" fill="url(#cyan)">SIGNAL</text>
+    <line x1="10" y1="138" x2="640" y2="138" stroke="#0aa9ff" stroke-width="2" opacity="0.35"/>
+    <line x1="426" y1="138" x2="640" y2="138" stroke="#5cf6ff" stroke-width="3" opacity="0.75"/>
+  </g>
+</svg>
