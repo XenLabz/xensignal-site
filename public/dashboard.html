@@ -3,72 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>XenSignal Shadow Operations Dashboard</title>
+<title>XenSignal Command Console</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="ultra dashboard-body">
-<div class="grid-overlay"></div>
-<header class="site-header cinematic-header">
-<a class="brand" href="index.html"><img class="nav-logo" src="assets/xensignal-logo.svg" alt="XenSignal logo"></a>
-<nav>
+<body class="dashboard-body">
+<header class="console-topbar">
+<a class="console-brand" href="index.html"><img src="assets/xensignal-logo.svg" alt="XenSignal"></a>
+<nav class="console-nav">
 <a href="index.html">Home</a>
 <a href="#optimizer">Optimizer</a>
 <a href="#reports">Reports</a>
 <a class="button ghost" href="reports/latest-shadow-summary.json">Raw JSON</a>
 </nav>
 </header>
-<main>
-<section class="ops-hero">
+<main class="console-shell">
+<section class="console-hero">
 <div>
-<div class="badge live-badge">SHADOW OPERATIONS CONSOLE</div>
-<h1>Signal telemetry, optimizer posture, and evidence tracking.</h1>
-<p class="hero-text">This dashboard reads static JSON exports from the XenSignal research engine. It does not execute trades, touch orders, or pretend cPanel is a quant backend. Small mercy.</p>
-<div class="status-inline"><span><strong>Loaded</strong> <em id="loadedAt">Loading...</em></span><span><strong>Source</strong> /reports</span><span><strong>Mode</strong> Shadow</span></div>
+<div class="console-kicker">SHADOW OPS CONSOLE</div>
+<h1>Telemetry, posture, and evidence in one control surface.</h1>
+<p>This dashboard reads static research exports from <code>/reports</code>. It is for inspection, calibration, and operational review. No live execution runs from this site.</p>
 </div>
-<div class="ops-orb"><img src="assets/xensignal-logo.svg" alt="XenSignal"></div>
+<div class="console-loadout">
+<div><span>Loaded</span><strong id="loadedAt">Loading...</strong></div>
+<div><span>Mode</span><strong>Shadow</strong></div>
+<div><span>Source</span><strong>/reports</strong></div>
+</div>
 </section>
-<section class="metric-wall">
-<div class="metric-card big"><span>Windows / Candidates</span><strong id="metricN">-</strong><small>Total evaluated set</small></div>
-<div class="metric-card"><span>Wins</span><strong id="metricWins">-</strong><small>Positive outcomes</small></div>
-<div class="metric-card"><span>Losses</span><strong id="metricLosses">-</strong><small>Negative outcomes</small></div>
-<div class="metric-card accent-metric"><span>Win Rate</span><strong id="metricWinRate">-</strong><small>Observed accuracy</small></div>
-<div class="metric-card"><span>Avg Net</span><strong id="metricAvgNet">-</strong><small>Mean net result</small></div>
-<div class="metric-card"><span>Total Net</span><strong id="metricTotalNet">-</strong><small>Aggregate result</small></div>
+<section class="console-metrics">
+<div class="metric-tile primary-tile"><span>Win Rate</span><strong id="metricWinRate">-</strong><small>Observed accuracy</small></div>
+<div class="metric-tile"><span>Windows</span><strong id="metricN">-</strong><small>Candidates evaluated</small></div>
+<div class="metric-tile"><span>Wins</span><strong id="metricWins">-</strong><small>Positive outcomes</small></div>
+<div class="metric-tile"><span>Losses</span><strong id="metricLosses">-</strong><small>Negative outcomes</small></div>
+<div class="metric-tile"><span>Avg Net</span><strong id="metricAvgNet">-</strong><small>Mean result</small></div>
+<div class="metric-tile danger-tile"><span>Total Net</span><strong id="metricTotalNet">-</strong><small>Aggregate result</small></div>
 </section>
-<section id="optimizer" class="ops-grid">
-<div class="glass-card command-card">
-<div class="eyebrow">Optimizer Posture</div>
-<h2>Authority remains restricted.</h2>
-<div class="status-stack">
+<section id="optimizer" class="console-grid">
+<div class="console-card posture-card">
+<div class="card-head"><span>Optimizer Posture</span><b>Restricted</b></div>
+<h2>Authority remains locked behind evidence.</h2>
+<div class="status-stack compact-stack">
 <div class="status-row"><span>Profile</span><strong id="profile">-</strong></div>
-<div class="status-row"><span>Deployment mode</span><strong id="deploymentMode">-</strong></div>
-<div class="status-row"><span>Engine may consume</span><strong id="engineMayConsume">-</strong></div>
+<div class="status-row"><span>Deployment</span><strong id="deploymentMode">-</strong></div>
+<div class="status-row"><span>May consume</span><strong id="engineMayConsume">-</strong></div>
 <div class="status-row"><span>Shadow only</span><strong id="shadowOnly">-</strong></div>
 </div>
 </div>
-<div class="glass-card code-card">
-<div class="eyebrow">Recommended Parameters</div>
-<pre class="json-box" id="recommendedParams">Loading...</pre>
+<div class="console-card params-card">
+<div class="card-head"><span>Recommended Parameters</span><b>JSON</b></div>
+<pre class="json-box console-json" id="recommendedParams">Loading...</pre>
 </div>
 </section>
-<section id="reports" class="report-console">
+<section id="reports" class="console-card report-card">
 <div>
-<div class="eyebrow">Evidence Files</div>
-<h2>Static exports powering the console.</h2>
-<p>Drop fresh exports into <code>/reports</code> and reload. Yes, it is primitive. Also yes, it is stable.</p>
+<div class="card-head"><span>Evidence Files</span><b>Static exports</b></div>
+<h2>Report artifacts</h2>
+<p>Drop fresh JSON exports into the reports folder and reload the console. Primitive, reliable, and refreshingly free of cloud orchestration theater.</p>
 </div>
 <div class="report-links">
 <a class="button secondary" href="reports/latest-shadow-summary.json">Shadow Summary</a>
 <a class="button secondary" href="reports/latest-optimizer-state.json">Optimizer State</a>
 </div>
 </section>
-<section class="glass-card notes-card">
-<div class="eyebrow">Recent Notes</div>
+<section class="console-card notes-card">
+<div class="card-head"><span>Recent Notes</span><b>Runtime</b></div>
 <ul id="notes" class="checklist"></ul>
 </section>
 </main>
-<footer><span>© <span id="year"></span> XenLabz, LLC</span><span>Dashboard reads static JSON exports only.</span></footer>
+<footer><span>© <span id="year"></span> XenLabz, LLC</span><span>Static console. Research use only.</span></footer>
 <script src="assets/dashboard.js"></script>
 </body>
 </html>
