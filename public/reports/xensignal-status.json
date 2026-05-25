@@ -1,0 +1,40 @@
+{
+  "generated_at_utc": "pending-local-export",
+  "published_at_utc": "pending-local-export",
+  "experiment": "EXP006-F_HARD_GATE_CIRCUIT_BREAKER",
+  "mode": "shadow_research_only",
+  "public_notice": "Sanitized delayed research export. No live execution is hosted from this website. Not financial advice.",
+  "visual": {
+    "rows": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": null,
+    "pnl": 0,
+    "avg_pnl": null
+  },
+  "lifetime": {
+    "rows": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": null,
+    "pnl": 0,
+    "avg_pnl": null
+  },
+  "guard": {
+    "circuit_active": null,
+    "ultra_strict": null,
+    "guarded_before": null,
+    "guarded_after": null,
+    "dropped": null
+  },
+  "health": {
+    "trades_age_seconds": null,
+    "guarded_age_seconds": null,
+    "raw_age_seconds": null,
+    "enforcer_state_age_seconds": null
+  }
+}
