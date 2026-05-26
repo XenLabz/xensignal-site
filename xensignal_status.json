@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-05-25T23:59:59.572473+00:00",
+  "published_at_utc": "2026-05-25T23:59:59.653263+00:00",
+  "service": "XENSIGNAL_DUCKDB_VISUAL_SERVICE_V4_BASELINE_ROWS",
+  "project": "XenSignal",
+  "mode": "Shadow-mode research dashboard",
+  "disclaimer": "Experimental simulated strategy telemetry. No live trading execution. Not financial advice.",
+  "experiment": "EXP006-F_HARD_GATE_CIRCUIT_BREAKER",
+  "visual": {
+    "rows": 27.0,
+    "open": 1.0,
+    "closed": 26.0,
+    "wins": 12.0,
+    "losses": 14.0,
+    "win_rate": 0.4615,
+    "pnl": -0.74,
+    "baseline_rows": 2628.0,
+    "visual_mode": "baseline_rows_v4"
+  },
+  "lifetime": {
+    "rows": 2655.0,
+    "open": 1.0,
+    "closed": 2654.0,
+    "wins": 824.0,
+    "losses": 1830.0,
+    "win_rate": 0.3105,
+    "pnl": 1900.236
+  },
+  "guard": {
+    "circuit_active": false,
+    "ultra_strict": true,
+    "guarded_before": 21.0,
+    "guarded_after": 21.0,
+    "dropped": 0.0,
+    "one_hour": {
+      "closed": 26.0,
+      "wins": 12.0,
+      "losses": 14.0,
+      "win_rate": 0.4615,
+      "pnl": -0.74,
+      "avg_pnl": -0.028462
+    },
+    "six_hour": {
+      "closed": 287.0,
+      "wins": 84.0,
+      "losses": 203.0,
+      "win_rate": 0.2927,
+      "pnl": -4.542,
+      "avg_pnl": -0.015826
+    }
+  },
+  "health": {
+    "trades_age_seconds": 4.84,
+    "guarded_age_seconds": 5.05,
+    "raw_opps_age_seconds": 1.91,
+    "snapshots_age_seconds": 4.24,
+    "enforcer_state_age_seconds": 459.62,
+    "arena_state_age_seconds": 4.92
+  }
+}
